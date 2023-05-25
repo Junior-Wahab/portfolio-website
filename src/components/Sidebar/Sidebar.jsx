@@ -1,10 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import {
+  FaBriefcase,
   FaEnvelope,
   FaGithub,
   FaHome,
   FaLinkedin,
-  FaUser,
+  FaTwitter,
+  FaUserAlt,
 } from "react-icons/fa";
 import "./sidebar.scss";
 
@@ -12,40 +14,54 @@ const Sidebar = () => {
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
-        JnrWahab
+        <h3 className="">JMW</h3>
       </Link>
+
       <nav>
         <NavLink exact="true" to="/">
-          <FaHome />
+          <FaHome className="icon" />
+          Home
         </NavLink>
 
-        <NavLink exact="true" className="about-link" to="/about">
-          <FaUser />
+        <NavLink to="/about">
+          <FaUserAlt className="icon" />
+          About
         </NavLink>
 
-        <NavLink exact="true" className="contact-link" to="/contact">
-          <FaEnvelope />
+        <NavLink to="/portfolio">
+          <FaBriefcase className="icon" />
+          Portfolio
+        </NavLink>
+
+        <NavLink to="/contact">
+          <FaEnvelope className="icon" />
+          Contact
         </NavLink>
       </nav>
 
       <ul>
         <li>
           <a
-            href="https:www.linkedin.com/in/wahab-junior"
-            target="_blank"
+            href="https://www.linkedin.com/in/wahab-junior"
             rel="noreferrer"
+            target="_blank"
           >
             <FaLinkedin />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Jnrchry" rel="noreferrer" target="_blank">
+            <FaGithub />
           </a>
         </li>
 
         <li>
           <a
-            href="https:www.linkedin.com/in/wahab-junior"
-            target="_blank"
+            href="https://twitter.com/jnrmwahab"
             rel="noreferrer"
+            target="_blank"
           >
-            <FaGithub />
+            <FaTwitter />
           </a>
         </li>
       </ul>

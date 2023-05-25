@@ -1,16 +1,22 @@
 .nav-bar {
   background: #181818;
-  width: 60px;
+  width: 65px;
   height: 100%;
-  position: absolute;
-  left: 0;
   top: 0;
+  position: absolute;
   z-index: 3;
   min-height: 500px;
 
   .logo {
-    display: block;
     padding: 8px 0;
+    text-decoration: none;
+
+    h3 {
+      text-align: center;
+      color: #fff;
+      margin: 10px auto;
+      font-size: 2rem;
+    }
   }
 }
 
@@ -24,76 +30,55 @@ nav {
   width: 100%;
 
   a {
-    font-size: 22px;
-    color: #4d4d4e;
-    display: block;
-    line-height: 51px;
-    height: 51px;
+    font-size: 1rem;
+    margin-bottom: 12px;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2rem;
+    height: 51px;
     position: relative;
+    color: #4d4d4e;
 
-    i {
-      transition: all 0.3s ease-out;
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 5px;
     }
 
     &:hover {
       color: #ffd700;
-
-      svg {
-        opacity: 0;
-      }
-
-      &:after {
-        opacity: 1;
-      }
-    }
-
-    &::after {
-      content: "";
-      font-size: 9px;
-      letter-spacing: 2px;
-      position: absolute;
-      bottom: 0;
-      display: block;
-      width: 100%;
-      text-align: center;
-      opacity: 0;
       transition: all 0.3s ease-out;
     }
 
-    &:first-child {
-      &::after {
-        content: "Home";
-      }
+    &.active {
+      color: #ffd700;
     }
-  }
-  a.about-link {
-    &::after {
-      content: "About";
-    }
-  }
-
-  a.contact-link {
-    &::after {
-      content: "Contact";
-    }
-  }
-}
-
-.active {
-  color: fff;
-  svg {
-    color: #ffd700;
   }
 }
 
 ul {
   position: absolute;
+  bottom: 20px;
   width: 100%;
-  bottom: 28%;
+  display: block;
   padding: 0;
   list-style: none;
   text-align: center;
-  display: block;
   margin: 0;
+
+  li {
+    a {
+      padding: 7px 0;
+      display: block;
+      font-size: 1.4rem;
+      color: #4d4d4e;
+      line-height: 1rem;
+
+      &:hover svg {
+        color: #ffd700;
+      }
+    }
+  }
 }
