@@ -39,7 +39,8 @@
 }
 
 .about-page,
-.contact-page {
+.contact-page,
+.error-page {
   .text-zone {
     position: absolute;
     left: 10%;
@@ -51,7 +52,7 @@
     display: table-cell;
 
     & p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       line-height: 2rem;
       color: #fff;
       min-width: fit-content;
