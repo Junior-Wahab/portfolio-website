@@ -1,13 +1,49 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./contact.scss";
+// components
 import AnimateLetters from "../AnimateLetters/AnimateLetters";
+// React-loaders
 import Loader from "react-loaders";
-import { Link } from "react-router-dom";
-import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa";
+// React icons(font-awesome)
+import { FaEnvelope, FaPhone } from "react-icons/fa";
+// emailjs
+import emailjs from "@emailjs/browser";
+// Toast
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [letterClasss, setLetterClass] = useState("text-animate");
   const [loading, setLoading] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_x9kz78w",
+        "template_gm823pa",
+        form.current,
+        "sNRaIitmrD5u4wnP6"
+      )
+      .then(
+        () => {
+          window.location.reload(false);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const notify = () => {
+    show
+      ? toast.success(`Message sent successfully`)
+      : toast.error(`Message not sent`);
+  };
 
   useEffect(() => {
     setInterval(() => {
@@ -56,35 +92,76 @@ const Contact = () => {
 
             <div className="contact-info">
               <div>
-                <Link href="jnr: jnrmwahab@gmail.com " target="_blank">
+                <a href="mailto: jnrmwahab@gmail.com ">
                   <FaEnvelope className="icon" />
                   Jnrmwahab@gmail.com
-                </Link>
+                </a>
               </div>
 
               <div>
-                <Link>
+                <a href="tel:0558708343">
                   <FaPhone className="icon" />
                   +233 558708343
-                </Link>
-              </div>
-
-              <div>
-                <Link
-                  to="https://www.linkedin.com/in/wahab-junior"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaLinkedin className="icon" />
-                  LinkedIn
-                </Link>
+                </a>
               </div>
             </div>
 
             <div className="contact-form">
-              <form action=""></form>
+              <form action="" ref={form} onSubmit={sendEmail}>
+                <div className="input-group">
+                  <label htmlFor="">Full Name</label>
+                  <input
+                    type="text"
+                    placeholder="Fullname"
+                    name="user_name"
+                    required
+                  />
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="">Email</label>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="user_email"
+                    required
+                  />
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="">Subject</label>
+                  <input
+                    type="text"
+                    placeholder="Subect"
+                    name="from_name"
+                    required
+                  />
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="">Message</label>
+                  <textarea
+                    name="message"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  onClick={notify}
+                  className="solid-button"
+                  value="send"
+                >
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
+          <ToastContainer />
         </div>
       )}
     </>
