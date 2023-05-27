@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./home.scss";
-import AnimateLetters from "../AnimateLetters.jsx/AnimateLetters";
+import AnimateLetters from "../AnimateLetters/AnimateLetters";
 import Image from "./Image/Image";
 import Loader from "react-loaders";
 

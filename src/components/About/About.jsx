@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import AnimateLetters from "../AnimateLetters.jsx/AnimateLetters";
+import AnimateLetters from "../AnimateLetters/AnimateLetters";
 import "./about.scss";
 import {
   FaCss3,
