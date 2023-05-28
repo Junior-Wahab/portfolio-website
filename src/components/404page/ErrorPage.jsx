@@ -40,6 +40,7 @@ const ErrorPage = () => {
               Unfortunately there’s nothing to see here. You may have mistyped
               the address or the page may have moved.
             </p>
+
             <Link to="/" className="button">
               Go to homepage
             </Link>
