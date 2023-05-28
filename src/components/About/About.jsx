@@ -36,19 +36,7 @@ const About = () => {
             <h1>
               <AnimateLetters
                 letterClass={letterClasss}
-                stringArray={[
-                  "A",
-                  "b",
-                  "o",
-                  "u",
-                  "t",
-                  " ",
-                  "W",
-                  "a",
-                  "h",
-                  "a",
-                  "b",
-                ]}
+                stringArray={["A", "b", "o", "u", "t", " ", "M", "e"]}
                 index={15}
               />
             </h1>

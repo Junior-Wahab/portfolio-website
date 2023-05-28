@@ -32,6 +32,7 @@ const Contact = () => {
       .then(
         () => {
           window.location.reload(false);
+          notify(toast.success);
         },
         (error) => {
           console.log(error.text);
@@ -76,7 +77,7 @@ const Contact = () => {
                   "c",
                   "t",
                   "  ",
-                  "m",
+                  "M",
                   "e",
                 ]}
                 index={15}
@@ -87,7 +88,7 @@ const Contact = () => {
               As a UI/UX designer and a frontend developer, my objective is to
               build a connection between a product and its users. I created this
               bridge with experiences and stories that people can relate to and
-              engage with. I'm looking for designer jobs right now.
+              engage with.
             </p>
 
             <div className="contact-info">
@@ -156,7 +157,7 @@ const Contact = () => {
                   className="solid-button"
                   value="send"
                 >
-                  Submit
+                  Send Message
                 </button>
               </form>
             </div>

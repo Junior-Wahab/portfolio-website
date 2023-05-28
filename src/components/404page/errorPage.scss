@@ -1,0 +1,20 @@
+.error-message {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+.text-zone .button {
+  padding: 10px 8px;
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  text-decoration: none;
+
+  .button:hover {
+    background-color: #ffdc15;
+  }
+}

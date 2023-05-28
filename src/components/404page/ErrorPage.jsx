@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import AnimateLetters from "../AnimateLetters/AnimateLetters";
 import Loader from "react-loaders";
+import "./errorPage.scss";
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   const [letterClasss, setLetterClass] = useState("text-animate");
@@ -32,6 +34,15 @@ const ErrorPage = () => {
                 index={15}
               />
             </h1>
+
+            <h2 className="error-message">Oops! Page not found</h2>
+            <p>
+              Unfortunately there’s nothing to see here. You may have mistyped
+              the address or the page may have moved.
+            </p>
+            <Link to="/" className="button">
+              Go to homepage
+            </Link>
           </div>
         </div>
       )}
