@@ -32,7 +32,7 @@ const Contact = () => {
       .then(
         () => {
           window.location.reload(false);
-          notify(toast.success);
+          setShow(true);
         },
         (error) => {
           console.log(error.text);
@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   const notify = () => {
-    show
+    show === true
       ? toast.success(`Message sent successfully`)
       : toast.error(`Message not sent`);
   };
@@ -162,7 +162,7 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <ToastContainer />
+          <ToastContainer autoClose="1000" />
         </div>
       )}
     </>
