@@ -154,7 +154,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   onClick={notify}
-                  className="solid-button"
+                  className="flat-button"
                   value="send"
                 >
                   Send Message

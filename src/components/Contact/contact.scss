@@ -23,7 +23,7 @@
 }
 
 form {
-  width: 80%;
+  width: 65%;
   max-width: 600px;
 }
 
@@ -42,15 +42,22 @@ textarea {
 
 label {
   color: #ffd700;
+  font-size: 1.3rem;
 }
 
-.solid-button {
+.flat-button {
   font-size: 1rem;
-  padding: 8px 10px;
-  background-color: #ffd700;
+  padding: 10px 10px;
+  color: #fff;
   color: #333;
   font-weight: bold;
   letter-spacing: 3px;
+  border: none;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #ffd700;
+  }
 }
 
 // Medai quary
