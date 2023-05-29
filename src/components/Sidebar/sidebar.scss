@@ -63,22 +63,26 @@ nav {
 }
 
 ul {
+  width: 100%;
   position: absolute;
   bottom: 20px;
-  width: 100%;
   display: block;
   padding: 0;
   list-style: none;
   text-align: center;
-  margin: 0;
 
   li {
+    margin-top: 0px;
+    position: relative;
+    left: 2%;
+    top: 100%;
+    margin-bottom: 20px;
+
     a {
-      padding: 7px 0;
-      display: block;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: #4d4d4e;
       line-height: 1rem;
+      text-align: center;
 
       &:hover svg {
         color: #ffd700;
