@@ -92,11 +92,10 @@ ul {
 
 @media screen and (max-width: 1200px) {
   .nav-bar {
-    position: initial;
+    position: fixed;
     height: auto;
     min-height: auto;
     width: 100%;
-    position: fixed;
 
     .logo h3 {
       text-align: left;
@@ -113,9 +112,9 @@ ul {
       width: 100%;
       height: 100%;
       background: #181818;
+      position: fixed;
       top: 0;
       left: 0;
-      position: fixed;
       z-index: 2;
       margin: 0;
 
@@ -138,7 +137,7 @@ ul {
       display: block;
       position: absolute;
       top: 10px;
-      right: 20px;
+      right: 10%;
       font-size: 2.5rem;
     }
   }
