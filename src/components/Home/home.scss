@@ -24,21 +24,18 @@ h2 {
   animation: fadeIn 1s 1.8s backwards;
 }
 
-.flat-button {
+.home-page .flat-button {
   margin-top: 25px;
   float: left;
   animation: fadeIn 1s 1.8s backwards;
   white-space: nowrap;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 4px;
   text-decoration: none;
   padding: 10px 8px;
   text-transform: uppercase;
-}
-
-.flat-button {
-  color: #ffd700;
+  color: #fff;
   border: 1px solid #ffd700;
 
   &:hover {

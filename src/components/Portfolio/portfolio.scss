@@ -47,7 +47,7 @@
 .images-container .content {
   background-color: #fff;
   padding: 10px 10px 0 10px;
-  height: 45%;
+  height: 50%;
 }
 
 .portfolio-title {
@@ -70,6 +70,15 @@
 
   &:hover {
     background-color: #ffd700;
+  }
+}
+
+// Media Quary
+
+@media screen and (max-width: 554px) {
+  .images-container {
+    justify-content: center;
+    margin-top: 30px;
   }
 }
 

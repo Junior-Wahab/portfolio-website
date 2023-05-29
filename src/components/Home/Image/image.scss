@@ -123,6 +123,12 @@
     position: relative;
   }
 }
+// Media quary
+@media screen and (max-width: 1264px) {
+  .box {
+    right: 10%;
+  }
+}
 
 @media screen and (max-widtj: 556px) {
   .box {
