@@ -52,3 +52,9 @@ label {
   font-weight: bold;
   letter-spacing: 3px;
 }
+
+@media screen and (max-width: 538px) {
+  form {
+    width: 100%;
+  }
+}

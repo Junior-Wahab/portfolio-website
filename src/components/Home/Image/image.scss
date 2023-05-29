@@ -100,3 +100,26 @@
     transform: rotate(360deg);
   }
 }
+
+// Media quary
+@media screen and (max-width: 1200px) {
+  .box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    left: auto;
+    overflow: hidden;
+
+    &::after {
+      margin-top: 200;
+    }
+  }
+
+  .content {
+    position: relative;
+  }
+}

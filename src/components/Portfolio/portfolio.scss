@@ -17,15 +17,15 @@
 }
 
 .categories {
-  padding: 8px 10px;
   margin-bottom: 15px;
 
   .category {
-    margin-right: 10px;
+    margin-right: 15px;
     color: #fff;
     font-weight: 400;
-    font-size: 1.4rem;
-    text-decoration: none;
+    border: none;
+    font-size: 1.5rem;
+    background-color: transparent;
 
     &.active {
       color: #ffd700;
@@ -63,12 +63,17 @@
 
 .btn {
   padding: 8px 10px;
-  border: 1px solid #ffd700;
-  text-decoration: none;
   color: #333;
   font-weight: 600;
 
   &:hover {
     background-color: #ffd700;
+  }
+}
+
+@media screen and (max-width: 571px) {
+  .image-box {
+    justify-content: center;
+    align-items: center;
   }
 }

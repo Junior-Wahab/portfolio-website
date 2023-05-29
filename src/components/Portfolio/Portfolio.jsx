@@ -3,7 +3,6 @@ import "./portfolio.scss";
 import Loader from "react-loaders";
 import AnimateLetters from "../AnimateLetters/AnimateLetters";
 import PortfolioData from "../data/portfoliodata.json";
-import { Link, NavLink } from "react-router-dom";
 
 const Portfolio = () => {
   const [letterClasss, setLetterClass] = useState("text-animate");
@@ -23,16 +22,14 @@ const Portfolio = () => {
     }, 1000);
   }, []);
 
-  // const filterCategory = (category) => {
-  //   const result = PortfolioData.filter((currentData) => {
-  //     return currentData.category === category;
-  //   });
-
-  //   setData(result);
-  // };
-
-  const toggleFilter = (index) => {
+  const toggleFilter = (index, catItem) => {
     setToggleState(index);
+
+    const result = data.portfolio.filter((currentData) => {
+      return currentData.category === catItem;
+    });
+
+    setData(result);
   };
 
   return (
@@ -50,24 +47,24 @@ const Portfolio = () => {
           </h1>
 
           <div className="categories">
-            <Link
+            <button
               className={toggleState === 1 ? "category active" : "category"}
               onClick={() => toggleFilter(1)}
             >
               All
-            </Link>
-            <Link
+            </button>
+            <button
               className={toggleState === 2 ? "category active" : "category"}
-              onClick={() => toggleFilter(2)}
+              onClick={() => toggleFilter(2, "UI/UX Design")}
             >
               UI/UX Design
-            </Link>
-            <Link
+            </button>
+            <button
               className={toggleState === 3 ? "category active" : "category"}
               onClick={() => toggleFilter(3)}
             >
               Frontend
-            </Link>
+            </button>
           </div>
 
           <div className="images-container">

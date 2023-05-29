@@ -1,42 +1,52 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
+  FaBars,
   FaBriefcase,
   FaEnvelope,
   FaGithub,
   FaHome,
   FaLinkedin,
+  FaTimes,
   FaTwitter,
   FaUserAlt,
 } from "react-icons/fa";
 import "./sidebar.scss";
 
 const Sidebar = () => {
+  const [showNav, setShowNav] = useState(false);
+
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
         <h3 className="">JMW</h3>
       </Link>
 
-      <nav>
-        <NavLink exact="true" to="/">
+      <nav className={showNav ? "mobile-show" : ""}>
+        <NavLink exact="true" to="/" onClick={() => setShowNav(false)}>
           <FaHome className="icon" />
           Home
         </NavLink>
 
-        <NavLink to="/about">
+        <NavLink to="/about" onClick={() => setShowNav(false)}>
           <FaUserAlt className="icon" />
           About
         </NavLink>
 
-        <NavLink to="/portfolio">
+        <NavLink to="/portfolio" onClick={() => setShowNav(false)}>
           <FaBriefcase className="icon" />
           Portfolio
         </NavLink>
 
-        <NavLink to="/contact">
+        <NavLink to="/contact" onClick={() => setShowNav(false)}>
           <FaEnvelope className="icon" />
           Contact
         </NavLink>
+        <FaTimes
+          color="#ffd700"
+          className="close-icon"
+          onClick={() => setShowNav(false)}
+        />
       </nav>
 
       <ul>
@@ -65,6 +75,11 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
+      <FaBars
+        color="#ffd700"
+        className="hamburger-icon"
+        onClick={() => setShowNav(true)}
+      />
     </div>
   );
 };

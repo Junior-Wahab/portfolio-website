@@ -46,3 +46,17 @@ h2 {
     color: #333;
   }
 }
+
+// Media quaries
+@media screen and (max-width: 1200px) {
+  .home-page {
+    .text-zone {
+      position: initial;
+      width: 100%;
+      padding-right: 10%;
+      padding-left: 10%;
+      box-sizing: border-box;
+      margin-top: 300px;
+    }
+  }
+}
